@@ -1,0 +1,12 @@
+<%= form_for @bookmark do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %><br>
+    <%= f.label :url %>
+    <%= f.text_field :url %><br>
+    <%= f.label :shortening %>
+    <%= f.text_field :shortening %><br>
+    <%= f.submit %>
+<% end %>
+<br>
+<%= link_to 'Back to list', bookmarks_path %><br>
+<%= link_to 'Delete', bookmark_path(@bookmark), method: 'delete' %>

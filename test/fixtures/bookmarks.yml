@@ -1,0 +1,22 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+reddit_home:
+  title: Reddit
+  url: https://reddit.com/
+  site: reddit
+
+reddit_cats:
+  title: Reddit Cats
+  url: https://reddit.com/cats
+  site: reddit
+
+reddit_dogs:
+  title: Reddit Dogs
+  url: https://reddit.com/dogs
+  site: reddit
+
+google_home:
+  title: Google
+  url: https://google.com/
+  shortening: https://goo.gl
+  site: google

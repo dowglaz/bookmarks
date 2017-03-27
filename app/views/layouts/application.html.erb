@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bookmarks</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+      <% if flash[:error].present? %>
+          <div class="flash error">
+              <b>Error</b>: <%= flash[:error] %>
+          </div>
+      <% end %>
+      <% if flash[:info].present? %>
+          <div class="flash info">
+              <b>Info</b>: <%= flash[:info] %>
+          </div>
+      <% end %>
+    <%= yield %>
+  </body>
+</html>

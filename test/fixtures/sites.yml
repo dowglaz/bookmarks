@@ -1,0 +1,6 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+google:
+  top_level_url: https://google.com/
+
+reddit:
+  top_level_url: https://reddit.com/

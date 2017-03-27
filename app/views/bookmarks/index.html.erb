@@ -1,0 +1,23 @@
+<h1>Bookmarks</h1>
+
+<%= form_tag(bookmarks_path, method: "get") do %>
+    <%= label_tag(:q, "Search for")%>
+    <%= text_field_tag(:q) %>
+   <%= submit_tag("Search by title") %>
+<% end %>
+
+<% @bookmarks.each do |bookmark| %>
+    <p>
+        <b>Title:</b> <%= bookmark.title %><br>
+        <b>URL:</b> <%= bookmark.url %><br>
+        <b>Shortening:</b> <%= bookmark.shortening %><br>
+        <b>Site:</b> <%= bookmark.site.top_level_url %><br>
+        <%= link_to 'Edit', edit_bookmark_path(bookmark) %>
+       <%= link_to 'Delete', bookmark_path(bookmark), method: 'delete' %>
+    </p>
+<% end %>
+
+<%= link_to 'Create', new_bookmark_path %>
+<% if @filtered %>
+    <%= link_to 'Clear search', bookmarks_path %>
+<% end %>
